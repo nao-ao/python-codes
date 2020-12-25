@@ -7,6 +7,7 @@ df = pd.DataFrame(
     columns = ['alpha', 'beta', 'gamma']
 )
 print(df)
+
 #    alpha  beta  gamma
 # A      0     1      2
 # B      3     4      5
@@ -25,8 +26,8 @@ print(df.at['C', 'beta'])
 # 7
 
 print(df.iat[0,0])
-print(df.iat[2,1])
 # 0
+print(df.iat[2,1])
 # 7
 
 #    alpha  beta  gamma
@@ -110,7 +111,6 @@ for i in range(len(df)):
 # 5
 # 8
 # 11
-
 
 #    alpha  beta  gamma
 # A      0     1      2
