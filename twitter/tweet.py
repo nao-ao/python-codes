@@ -20,7 +20,7 @@ api.update_with_media(status = 'image tweet from python', filename = 'sample.png
 
 # リプライツイート
 # まずリプライを返したいユーザーのID(@のID)を代入
-Account = 'samplemoviebot1'
+Account = ''
 
 # user_timelineで指定したユーザーのタイムラインのTweetを取得(最大20個まで)
 tweets = api.user_timeline(Account, count=20, page=1)
