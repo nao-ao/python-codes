@@ -15,3 +15,10 @@ print(df)
 # 0  佐藤  23
 # 1  鈴木  45
 # 2  高橋  32
+
+csv_df = pd.read_csv("sample_data/sample.csv")
+print(csv_df)
+#   Unnamed: 0  生徒A  生徒B  生徒C
+# 0      国語   50     87     76
+# 1      数学   82     63     94
+# 2      英語   73     59     43
