@@ -22,3 +22,12 @@ print(csv_df)
 # 0      国語   50     87     76
 # 1      数学   82     63     94
 # 2      英語   73     59     43
+
+# ヘッダーを指定しなければ，1行目がcolumnsとして認識される．
+# columnsを変えたい場合はheader=0として，namesを指定する．
+csv_df = pd.read_csv("sample_data/sample.csv", header=0, names=['学生A', '学生B', '学生C'])
+print(csv_df)
+#     学生A  学生B  学生C
+# 国語   50   87   76
+# 数学   82   63   94
+# 英語   73   59   43
