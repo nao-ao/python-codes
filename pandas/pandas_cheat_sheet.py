@@ -110,7 +110,6 @@ print(df)
 # b        2
 # c        3
 
-
 numpy_ndarray2 = np.array([[5, 2], [3, 6]])
 
 print(numpy_ndarray2)
