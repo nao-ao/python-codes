@@ -17,6 +17,7 @@ print(df)
 # 2  高橋  32
 
 csv_df = pd.read_csv("sample_data/sample.csv")
+
 print(csv_df)
 #   Unnamed: 0  生徒A  生徒B  生徒C
 # 0      国語   50     87     76
@@ -24,6 +25,7 @@ print(csv_df)
 # 2      英語   73     59     43
 
 csv_df = pd.read_csv("sample_data/sample.csv", header=0, names=['教科', '学生A', '学生B', '学生C'])
+
 print(csv_df)
 #    教科  学生A  学生B  学生C
 # 0  国語   50   87   76
@@ -31,6 +33,7 @@ print(csv_df)
 # 2  英語   73   59   43
 
 csv_df = pd.read_csv("sample_data/sample.csv", index_col=0)
+
 print(csv_df)
 #     生徒A  生徒B  生徒C
 # 国語   50   87   76
@@ -39,6 +42,7 @@ print(csv_df)
 
 sample_list = [3,2,4,1,5]
 list_to_df = pd.DataFrame(sample_list)
+
 print(list_to_df)
 #    0
 # 0  3
@@ -48,18 +52,21 @@ print(list_to_df)
 # 4  5
 
 list_to_ic_df = pd.DataFrame(sample_list, index=['a', 'b', 'c', 'd', 'e'], columns=['column1'])
+
 print(list_to_ic_df)
-#    0
-# 0  3
-# 1  2
-# 2  4
-# 3  1
-# 4  5
+#    column1
+# a        3
+# b        2
+# c        4
+# d        1
+# e        5
 
 sample_2d_list = [[3,2,4,1,5],[30,20,40,10,50],[43,32,42,13,52],]
 list_2d_to_df = pd.DataFrame(sample_2d_list)
+
 print(sample_2d_list)
 # [[3, 2, 4, 1, 5], [30, 20, 40, 10, 50], [43, 32, 42, 13, 52]]
+
 print(list_2d_to_df)
 #     0   1   2   3   4
 # 0   3   2   4   1   5
@@ -68,6 +75,7 @@ print(list_2d_to_df)
 
 sample_2d_list = [[3,2,4,1,5],[30,20,40,10,50],[43,32,42,13,52],]
 list_2d_to_df = pd.DataFrame(sample_2d_list, index=['番号', '国語', '算数'], columns=['生徒A','生徒B','生徒C','生徒D','生徒E'])
+
 print(list_2d_to_df)
 #     生徒A  生徒B  生徒C  生徒D  生徒E
 # 番号    3    2    4    1    5
