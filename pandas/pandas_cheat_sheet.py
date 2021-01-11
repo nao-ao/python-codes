@@ -16,34 +16,34 @@ print(df)
 # 1  鈴木  45
 # 2  高橋  32
 
-csv_df = pd.read_csv("sample_data/sample.csv")
+df = pd.read_csv("sample_data/sample.csv")
 
-print(csv_df)
+print(df)
 #   Unnamed: 0  生徒A  生徒B  生徒C
 # 0      国語   50     87     76
 # 1      数学   82     63     94
 # 2      英語   73     59     43
 
-csv_df = pd.read_csv("sample_data/sample.csv", header=0, names=['教科', '学生A', '学生B', '学生C'])
+df = pd.read_csv("sample_data/sample.csv", header=0, names=['教科', '学生A', '学生B', '学生C'])
 
-print(csv_df)
+print(df)
 #    教科  学生A  学生B  学生C
 # 0  国語   50   87   76
 # 1  数学   82   63   94
 # 2  英語   73   59   43
 
-csv_df = pd.read_csv("sample_data/sample.csv", index_col=0)
+df = pd.read_csv("sample_data/sample.csv", index_col=0)
 
-print(csv_df)
+print(df)
 #     生徒A  生徒B  生徒C
 # 国語   50   87   76
 # 数学   82   63   94
 # 英語   73   59   43
 
 sample_list = [3,2,4,1,5]
-list_to_df = pd.DataFrame(sample_list)
+df = pd.DataFrame(sample_list)
 
-print(list_to_df)
+print(df)
 #    0
 # 0  3
 # 1  2
@@ -51,9 +51,9 @@ print(list_to_df)
 # 3  1
 # 4  5
 
-list_to_ic_df = pd.DataFrame(sample_list, index=['a', 'b', 'c', 'd', 'e'], columns=['column1'])
+df = pd.DataFrame(sample_list, index=['a', 'b', 'c', 'd', 'e'], columns=['column1'])
 
-print(list_to_ic_df)
+print(df)
 #    column1
 # a        3
 # b        2
@@ -62,25 +62,27 @@ print(list_to_ic_df)
 # e        5
 
 sample_2d_list = [[3,2,4,1,5],[30,20,40,10,50],[43,32,42,13,52],]
-list_2d_to_df = pd.DataFrame(sample_2d_list)
+df = pd.DataFrame(sample_2d_list)
 
 print(sample_2d_list)
 # [[3, 2, 4, 1, 5], [30, 20, 40, 10, 50], [43, 32, 42, 13, 52]]
 
-print(list_2d_to_df)
+print(df)
 #     0   1   2   3   4
 # 0   3   2   4   1   5
 # 1  30  20  40  10  50
 # 2  43  32  42  13  52
 
 sample_2d_list = [[3,2,4,1,5],[30,20,40,10,50],[43,32,42,13,52],]
-list_2d_to_df = pd.DataFrame(sample_2d_list, index=['番号', '国語', '算数'], columns=['生徒A','生徒B','生徒C','生徒D','生徒E'])
+df = pd.DataFrame(sample_2d_list, index=['番号', '国語', '算数'], columns=['生徒A','生徒B','生徒C','生徒D','生徒E'])
 
-print(list_2d_to_df)
+print(df)
 #     生徒A  生徒B  生徒C  生徒D  生徒E
 # 番号    3    2    4    1    5
 # 国語   30   20   40   10   50
 # 算数   43   32   42   13   52
+
+
 
 import numpy as np
 
@@ -92,13 +94,22 @@ print(numpy_ndarray)
 print(type(numpy_ndarray))
 # <class 'numpy.ndarray'>
 
-np_array_to_df = pd.DataFrame(numpy_ndarray)
+df = pd.DataFrame(numpy_ndarray)
 
-print(np_array_to_df)
+print(df)
 #    0
 # 0  1
 # 1  2
 # 2  3
+
+df = pd.DataFrame(numpy_ndarray, index=['a', 'b', 'c'], columns=['column1'])
+
+print(df)
+#    column1
+# a        1
+# b        2
+# c        3
+
 
 numpy_ndarray2 = np.array([[5, 2], [3, 6]])
 
@@ -109,9 +120,16 @@ print(numpy_ndarray2)
 print(type(numpy_ndarray2))
 # <class 'numpy.ndarray'>
 
-np_array2_to_df = pd.DataFrame(numpy_ndarray2)
+df = pd.DataFrame(numpy_ndarray2)
 
-print(np_array2_to_df)
+print(df)
 #    0  1
 # 0  5  2
 # 1  3  6
+
+df = pd.DataFrame(numpy_ndarray2, index=['x1', 'x2'], columns=['y1', 'y2'])
+
+print(df)
+#     y1  y2
+# x1   5   2
+# x2   3   6
