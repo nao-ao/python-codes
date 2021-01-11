@@ -56,3 +56,12 @@ print(list_to_ic_df)
 # 3  1
 # 4  5
 
+sample_2d_list = [[3,2,4,1,5],[30,20,40,10,50],[43,32,42,13,52],]
+list_2d_to_df = pd.DataFrame(sample_2d_list)
+print(sample_2d_list)
+# [[3, 2, 4, 1, 5], [30, 20, 40, 10, 50], [43, 32, 42, 13, 52]]
+print(list_2d_to_df)
+#     0   1   2   3   4
+# 0   3   2   4   1   5
+# 1  30  20  40  10  50
+# 2  43  32  42  13  52
