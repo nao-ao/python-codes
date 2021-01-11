@@ -82,3 +82,36 @@ print(list_2d_to_df)
 # 国語   30   20   40   10   50
 # 算数   43   32   42   13   52
 
+import numpy as np
+
+numpy_ndarray = np.array([1, 2, 3])
+
+print(numpy_ndarray)
+# [1 2 3]
+
+print(type(numpy_ndarray))
+# <class 'numpy.ndarray'>
+
+np_array_to_df = pd.DataFrame(numpy_ndarray)
+
+print(np_array_to_df)
+#    0
+# 0  1
+# 1  2
+# 2  3
+
+numpy_ndarray2 = np.array([[5, 2], [3, 6]])
+
+print(numpy_ndarray2)
+# [[5 2]
+#  [3 6]]
+
+print(type(numpy_ndarray2))
+# <class 'numpy.ndarray'>
+
+np_array2_to_df = pd.DataFrame(numpy_ndarray2)
+
+print(np_array2_to_df)
+#    0  1
+# 0  5  2
+# 1  3  6
