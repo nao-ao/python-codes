@@ -23,9 +23,6 @@ print(csv_df)
 # 1      数学   82     63     94
 # 2      英語   73     59     43
 
-# ヘッダーを指定しなければ，1行目がcolumnsとして認識される．
-# columnsを変えたい場合はheader=0として，namesを指定する．
-# namesで指定する場合は重複してはいけない
 csv_df = pd.read_csv("sample_data/sample.csv", header=0, names=['教科', '学生A', '学生B', '学生C'])
 print(csv_df)
 #    教科  学生A  学生B  学生C
@@ -33,10 +30,20 @@ print(csv_df)
 # 1  数学   82   63   94
 # 2  英語   73   59   43
 
-# indexとして使用する列を指定したい場合は，index_colで文字列名または列インデックスのいずれかで指定する．
 csv_df = pd.read_csv("sample_data/sample.csv", index_col=0)
 print(csv_df)
 #     生徒A  生徒B  生徒C
 # 国語   50   87   76
 # 数学   82   63   94
 # 英語   73   59   43
+
+sample_list = [3,2,4,1,5]
+list_to_df = pd.DataFrame(sample_list)
+print(list_to_df)
+#    0
+# 0  3
+# 1  2
+# 2  4
+# 3  1
+# 4  5
+
