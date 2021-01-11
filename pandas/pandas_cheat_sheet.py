@@ -214,4 +214,32 @@ print(df_concat)
 
 
 df_h = pd.read_csv("sample_data/test_h.csv")
+
 print(df_h)
+#      ID  氏名   合計  理科  社会
+# 0  A491  佐藤  255  40  82
+# 1  A497  鈴木  139  67  36
+# 2  A322  高橋  154  83  53
+# 3  A230  田中  125  98  50
+# 4  A104  伊藤  149  32  79
+# 5  A353  渡辺  114  58  85
+# 6  A174  山本  192  68  33
+# 7  A382  中村  186  38  99
+# 8  A102  小林  226  96  33
+# 9  A447  加藤  248  48  55
+
+df_merge = df_concat.merge(df_h)
+
+print(df_merge)
+
+df_merge = df_concat.merge(df_h, left_on='名前', right_on='氏名')
+
+print(df_merge)
+
+df_merge = pd.merge(df_concat, df_h, left_on='名前', right_on='氏名')
+
+print(df_merge)
+
+df_concat2 = pd.concat([df_concat, df_h], axis=1,)
+
+print(df_concat2)
